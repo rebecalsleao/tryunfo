@@ -13,7 +13,7 @@ class Form extends React.Component {
         <label htmlFor="description">
           Descrição
           <input
-            type="text"
+            type="textarea"
             id="description"
             data-testid="description-input"
           />
@@ -38,7 +38,7 @@ class Form extends React.Component {
 
         <label htmlFor="image">
           Imagem
-          <input type="file" id="image" data-testid="image-input" />
+          <input type="text" id="image" data-testid="image-input" />
         </label>
 
         <label htmlFor="option">
