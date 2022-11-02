@@ -30,11 +30,11 @@ class Form extends React.Component {
             value={ cardName }
             name="cardName"
             id="name"
-            onChange={ onInputChange }
             data-testid="name-input"
+            onChange={ onInputChange }
           />
         </label>
-
+        <br />
         <label htmlFor="description">
           Descrição
           <input
@@ -42,11 +42,12 @@ class Form extends React.Component {
             id="description"
             name="description"
             value={ cardDescription }
-            onChange={ onInputChange }
             data-testid="description-input"
+            onChange={ this.onInputChange }
           />
         </label>
 
+        <br />
         <div>
           <label htmlFor="attr1">
             Attr01
@@ -55,10 +56,11 @@ class Form extends React.Component {
               name="cardAttr1"
               id="attr1"
               value={ cardAttr1 }
-              onChange={ onInputChange }
               data-testid="attr1-input"
+              onChange={ this.onInputChange }
             />
           </label>
+          <br />
           <label htmlFor="attr2">
             Attr02
             <input
@@ -66,10 +68,11 @@ class Form extends React.Component {
               id="attr2"
               name="cardAttr2"
               value={ cardAttr2 }
-              onChange={ onInputChange }
               data-testid="attr2-input"
+              onChange={ this.onInputChange }
             />
           </label>
+          <br />
           <label htmlFor="attr3">
             Attr03
             <input
@@ -77,13 +80,13 @@ class Form extends React.Component {
               id="attr3"
               name="cardAttr3"
               value={ cardAttr3 }
-              onChange={ onInputChange }
               data-testid="attr3-input"
+              onChange={ this.onInputChange }
             />
           </label>
         </div>
 
-        <p placeholder="Pontos restantes = 000" />
+        <p>Pontos restantes = 000</p>
 
         <label htmlFor="image">
           Imagem
@@ -92,19 +95,21 @@ class Form extends React.Component {
             id="image"
             name="cardImage"
             value={ cardImage }
-            onChange={ onInputChange }
             data-testid="image-input"
+            onChange={ this.onInputChange }
           />
         </label>
+        <br />
 
         <label htmlFor="option">
           Raridade
           <select
+            type="select"
             id="option"
             name="cardRare"
             value={ cardRare }
-            onChange={ onInputChange }
             data-testid="rare-input"
+            onChange={ this.onInputChange }
           >
             <option>normal</option>
             <option>raro</option>
@@ -113,6 +118,7 @@ class Form extends React.Component {
           </select>
         </label>
 
+        <br />
         <label htmlFor="cardTrunfo">
           Super Trybe Trunfo
           <input
@@ -120,11 +126,12 @@ class Form extends React.Component {
             id="cardTrunfo"
             name="cardTrunfo"
             checked={ cardTrunfo }
-            onChange={ onInputChange }
             data-testid="trunfo-input"
+            onChange={ this.onInputChange }
           />
         </label>
 
+        <br />
         <button
           id="save"
           disabled={ isSaveButtonDisabled }
@@ -133,9 +140,7 @@ class Form extends React.Component {
           data-testid="save-button"
         >
           Salvar
-
         </button>
-
       </form>
     );
   }

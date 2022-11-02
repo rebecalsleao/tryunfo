@@ -13,6 +13,14 @@ class App extends React.Component {
     cardTrunfo: false,
   };
 
+  onInputChange = (event) => {
+    const { name, type, checked } = event.target;
+    const value = type === 'checkbox' ? checked : event.target.value;
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
     const {
       cardName,
@@ -24,6 +32,17 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
     } = this.state;
+
+    // const formState = {
+    //   cardName,
+    //   cardDescription,
+    //   cardAttr1,
+    //   cardAttr2,
+    //   cardAttr3,
+    //   cardImage,
+    //   cardRare,
+    //   cardTrunfo,
+    // };
 
     return (
       <div>
