@@ -21,13 +21,13 @@ class Form extends React.Component {
     return (
       <form>
         <h1>ADICIONE NOVA CARTA</h1>
-        <label htmlFor="name">
+        <label htmlFor="cardName">
           Nome
           <input
             type="text"
             value={ cardName }
             name="cardName"
-            id="name"
+            id="cardName"
             data-testid="name-input"
             onChange={ onInputChange }
           />
@@ -132,7 +132,7 @@ class Form extends React.Component {
         <br />
         <button
           id="save"
-          disabled={ isSaveButtonDisabled }
+          disabled={ !isSaveButtonDisabled }
           onClick={ onSaveButtonClick }
           type="button"
           data-testid="save-button"
