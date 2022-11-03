@@ -12,9 +12,9 @@ class App extends React.Component {
     cardAttr3: '0',
     cardRare: 'normal',
     cardTrunfo: false,
-    isSaveButtonDisabled: false,
-    saveCard: [],
+    isSaveButtonDisabled: true,
     hasTrunfo: false,
+    saveCard: [],
   };
 
   onInputChange = (event) => {
