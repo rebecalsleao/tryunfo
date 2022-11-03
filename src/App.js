@@ -43,7 +43,7 @@ class App extends React.Component {
     && Number(cardAttr2) >= 0 && Number(cardAttr3) >= 0;
     const logicaDeMudanca = inputFilled && maiorZero && menor90 && menor210;
     this.setState({
-      isSaveButtonDisabled: logicaDeMudanca,
+      isSaveButtonDisabled: !logicaDeMudanca,
     });
   };
 
@@ -128,6 +128,7 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
         />
+        { <saveCard.map((card) => <Card />) }
       </div>
     );
   }
